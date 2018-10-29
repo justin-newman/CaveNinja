@@ -285,20 +285,20 @@ Write-Host ""
         switch ($userResponse)
             {
                 0 { 
-                    [int]$global:health=150;
-                    [int]$global:shuriken=10; 
+                    $global:health=150;
+                    $global:shuriken=10; 
                 }
                 1 { 
-                    [int]$global:health=100;
-                    [int]$global:shuriken=5; 
+                    $global:health=100;
+                    $global:shuriken=5; 
                 }
                 2 { 
-                    [int]$global:health=75;
-                    [int]$global:shuriken=3; 
+                    $global:health=75;
+                    $global:shuriken=3; 
                 }
                 3 { 
-                    [int]$global:health=25;
-                    [int]$global:shuriken=100; 
+                    $global:health=25;
+                    $global:shuriken=100; 
                 }
             }
                                                                                                                         
@@ -309,6 +309,7 @@ Write-Host ""
 }
 
 function Instructions(){
+
     Write-Host "You enter the cave with $global:health health and $global:shuriken shurikens." -ForegroundColor Yellow
     Sleep 2
     Write-Host "You can find your current totals of each in the title bar at the top of this window." -ForegroundColor Yellow
@@ -328,6 +329,7 @@ function Instructions(){
 }
 
 function Cave1(){
+
     Write-Host ""
     Write-Host "You are immediately met by three beasts! Two skeletons, one on each side and a giant troll in the middle."
     Write-Host "They are super pissed and closing in on you. Take action, quickly!"
